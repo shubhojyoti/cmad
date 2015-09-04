@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.kartshub.app.User" table="users" schema="kartshubcmad" batch-size="3">
+		<id name="userId" type="int">
+			<column name="user_id" />
+			<generator class="native" />
+		</id>
+		<property name="username" type="string">
+			<column name="username" length="100" />
+		</property>
+		<property name="password" type="string">
+			<column name="password" length="32" />
+		</property>
+		<property name="firstname" type="string">
+			<column name="firstname" length="100" />
+		</property>
+		<property name="lastname" type="string">
+			<column name="lastname" length="100" />
+		</property>
+		<property name="joinDate" type="timestamp">
+			<column name="create_time" length="29" />
+		</property>
+		<property name="token" type="string">
+			<column name="token" length="150" />
+		</property>
+	</class>
+</hibernate-mapping>

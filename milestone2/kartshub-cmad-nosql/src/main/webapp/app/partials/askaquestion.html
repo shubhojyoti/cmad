@@ -1,0 +1,22 @@
+<header ng-controller="HeaderController">
+    <cmadheader></cmadheader>
+</header>
+
+<div class="container">
+    <h2 class="pagetitle">Ask a Question</h2>
+    <div ng-controller="AskAQuestionController">
+        <div class="confirmation" ng-show="submittedAnswer">Your question was submitted to our database.</div>
+        <form id="askquestion">
+            <input type="text" id="quesTitle" name="quesTitle" size="200" ng-trim="false" ng-model="ques.quesTitle" ng-maxlength="200" placeholder="What is your Question?">
+            <p class="smallfont splabel">{{200-ques.quesTitle.length}} more characters allowed</p>
+            <p>&nbsp;</p>
+            <textarea rows="10" cols="30" id="quesDesc" ng-model="ques.quesDesc" ng-trim="false" ng-maxlength="5000"></textarea>
+            <p class="smallfont splabel">{{5000-ques.quesDesc.length}} more characters allowed</p>
+            <input type="button" value="Submit" ng-click="submitQuestion()">
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Project created as part of the CMAD Cohort #1 by Shubhojyoti Bhattacharya and Kartikey Shetty</p>
+</div>

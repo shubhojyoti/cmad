@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.kartshub.app.Answer" table="answers" schema="kartshubcmad" batch-size="3">
+		<id name="ansId" type="int">
+			<column name="ans_id" />
+			<generator class="native" />
+		</id>
+		<property name="ansDesc" type="string">
+			<column name="ans_Desc" length="545" />
+		</property>
+		<property name="quesId" type="int">
+			<column name="ques_id" />
+		</property>
+		<property name="userId" type="int">
+			<column name="user_id" />
+		</property>
+		<property name="votes" type="int">
+			<column name="votes" />
+		</property>
+		<property name="createDate" type="timestamp">
+			<column name="create_time" length="29" />
+		</property>
+	</class>
+</hibernate-mapping>

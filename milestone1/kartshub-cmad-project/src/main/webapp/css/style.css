@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: none;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
+}
+.wrapper {
+    margin: 0 auto;
+    height: inherit;
+    background-color: #cbccc5;
+	background-image: linear-gradient(to bottom, #cbccc5, #bebfb9);
+}
+
+/* Login Page Styles */
+.wrapper h1 {
+    background: url(../images/logo.png) no-repeat;
+    text-indent: -9999px;
+    width: 237px;
+    height: 150px;
+}
+.wrapper #ciscologo {
+    float: right;
+    margin-top: -120px;
+    padding-right: 40px;
+}
+.login-wrapper {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.logincontainer {
+    width: 399px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #f2efe3;
+    -moz-box-shadow: 5px 5px 2px #999;
+    -webkit-box-shadow: 5px 5px 2px #999;
+    box-shadow: 5px 5px 2px #999;
+}
+.loginbox-top {
+    background-color: #e1e0d9;
+    height: 54px;
+    width: 100%;
+}
+.loginbox-body {
+    background-color: #f0f0e9;
+    padding-bottom: 20px;
+    border-top: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+}
+.loginbox-bottom {
+    background-color: #e1e0d9;
+    padding-bottom: 10px;
+}
+
+.loginbuttons {
+    padding-left: 20px;
+}
+
+.loginbuttons div {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+.wrapper h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #4e4f4b;
+    line-height: 54px;
+    padding-left: 20px;
+}
+.loginbox-body div {
+    color: #6c6c6c;
+    font-size: 1.1em;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+#login input[type="text"],#login input[type="password"] {
+    background: url(../images/loginform-text-bg.png) repeat-x;
+    margin-top: 7px;
+    height: 37px;
+    width: 355px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper .loginbutton {
+    background: url(../images/login-submit.png) repeat-x;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #b6b5b0;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    -moz-box-shadow: 2px 2px 1px #bbb;
+    -webkit-box-shadow: 2px 2px 1px #bbb;
+    box-shadow: 2px 2px 1px #bbb;
+    padding: 8px 25px;
+}
+#errorlogin {
+    background: #f6e0e0;
+    border: 1px solid #A51B0C;
+    font-size: 13px;
+    color: #901313;
+    padding: 10px;
+    line-height: 25px;
+    margin: 10px 25px;
+}
+#errorlogin p {
+    padding-left: 30px;
+}
+#errorlogin #close {
+    float: right;
+    margin-top: -29px;
+    margin-right: -4px;
+    opacity:0.8;
+}
+#errorlogin #close:hover { opacity: 1; }
+
+/* End of Login Page Styles */
+
+/* Manage Page Styles - Header and Navigations */
+.header {
+    margin: 0 auto;
+    backg round: url(../images/top-bar-bg.png) repeat-x;
+    background-color: #cbccc5;
+	background-image: linear-gradient(to bottom, #cbccc5, #bebfb9);
+}
+.header h1 {
+    height: 79px;
+    font-size: 2.5em;
+    color: #4e4f4b;
+    line-height: 79px;
+    text-shadow: 0 1px 0 #dcddd7;
+}
+.header h1:hover {
+        cursor: pointer;
+}
+.header #ciscologo {
+    float: right;
+    margin-top: -60px;
+    padding-right: 40px;
+}
+.topnavigation {
+    height: 40px;
+    background-color: #dcddd7;
+    clear: both;
+    margin-top: 1px;
+    border-bottom: 1px solid #aaaaaa;
+}
+.navholder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.welcome {
+    line-height: 40px;
+    font-weight: bold;
+}
+.navholder ul {
+    margin-top: -40px;
+    float: right;
+}
+.navholder ul li {
+    display: inline-block;
+    line-height: 40px;
+    margin-left: 10px;
+    padding: 0 5px;
+}
+.navholder ul li a:link,.navholder ul li a:visited {
+    text-decoration: none;
+    color: #800000;
+    font-size: 14px;
+}
+.navholder ul li a:hover {
+	color: #000000;
+}
+/* End of Manage Page Styles - Header and Navigations */
+
+/* Manage Page Styles - Others */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+body > .container {
+	margin: 0 auto 60px;
+}
+.container p {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 1.3em;
+}
+.container h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2em;
+    margin: 30px 0 0;
+}
+.container h2 a:link,.container h2 a:visited,.container h2 a:hover {
+    text-decoration: none;
+    color: #800000;
+    line-height: 30px;
+}
+.container h2 a:hover {
+    color: #000000;
+}
+.container h2.inner {
+    font-family: 'Vollkorn', serif;
+    font-size: 22px;
+    background: none;
+    padding-left: 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.container input[type="text"], .container input[type="password"], .container textarea {
+    margin: 10px auto 0 auto;
+    height: 37px;
+    width: 90%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+}
+.container textarea { height: 200px; }
+.container #submit1,.container #submit2 {
+ background: url(../images/login-submit.png) repeat-x;
+        -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+        border: 1px solid #b6b5b0;
+        padding: 8px 25px;
+        margin-top: 12px;
+        margin-right: 25px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        -moz-box-shadow: 1px 1px 1px #bbb;
+    -webkit-box-shadow: 1px 1px 1px #bbb;
+    box-shadow: 1px 1px 1px #bbb;
+}
+#inner input[type="text"],#inner input[type="password"] {
+        background: url(../images/loginform-text-bg.png) repeat-x;
+        margin-top: 7px;
+        height: 37px;
+        width: 355px;
+        -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+        color: #8c8c8c;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+}
+p.subhead {
+    font-weight: bold;
+    font-size: 13px;
+    color: #800000;
+    margin: 20px 0 10px 20px;
+}
+.footer {
+	height: 40px;
+    background-color: #dcddd7;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.footer p {
+	padding: 10px;
+	font-size: 0.7em;
+}
+/* End of Manage Page Styles - Others */
+
+/* Register Page */
+#register {
+    margin: 20px;
+}
+.new_user_name {
+    display: table;
+}
+.new_user_name .row {
+    display: table-row;
+}
+.new_user_name .row div {
+    display: table-cell;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.new_user_name .row div input {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+/* List Questions */
+.allquestions li {
+    list-style: none;
+    margin: 10px 20px 0 20px;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+    display: -webkit-flex;
+    display: flex;
+}
+.allquestions li a:link, .allquestions li a:visited {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #800000;
+}
+.allquestions li:last-child {
+	border-bottom: 0;
+}
+.allquestions li p {
+	font-size: 15px;
+	line-height: 1.5em;
+}
+.quesVotesCount {
+	font-size: 1.1em;
+	padding: 5px 0;
+	-webkit-align-self: center;
+	align-self: center;
+}
+a.quesVote:link, a.quesVote:visited {
+	color: #666666 !important;
+	-webkit-align-self: center;
+	align-self: center;
+}
+a.quesVote:hover {
+	color: #1d9875 !important;
+}
+a.negatecolor:hover {
+	color: #ab5b1a !important;
+}
+.quesArticle {
+	margin-left: 2em;
+}
+.quesArticle .meta {
+	font-size: 0.8em;
+}
+.quesArticle .meta a:link, .quesArticle .meta a:visited {
+	font-size: inherit;
+	color: #1d9f75;
+} 
+.metatext {
+	margin-right: 1em;
+}
+.quesVotes {
+	display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding-left: 10px;
+}
+/* Individual Question Pages */
+#indquestion .quesArticle p {
+	font-size: 1.1em;
+}
+#ansQuestion {
+	margin: 0 auto;
+	width: 90%;
+}
+#addAnswerForm {
+	float: right;
+	margin-right: 2em;
+	padding: 8px 25px;
+	font-size: 18px;
+}
+#answers, #ansDesc { clear: both; }
+
+/* Tabs */
+.tabarea {
+    padding: 20px;
+    clear: both;
+}
+.tabarea > nav {
+    border-bottom: thin solid #b2b5a2;
+    position: relative;
+}
+.tabarea > nav > a:first-of-type {
+    margin-left: 10px;
+}
+.tabarea > nav > a:link, .tabarea > nav > a:visited {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.65em;
+    color: #000;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+.tabarea > nav > a:link, .tabarea > nav > a:visited {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.65em;
+    color: #000;
+}
+.tabarea > nav a:link, .tabarea > nav a:visited {
+    font-weight: bold;
+}
+.tabarea > nav > a {
+    font-size: 0.85em;
+}
+.tabarea > nav a.selected {
+    color: #000;
+    border: none;
+}
+.tabarea > nav a.selected {
+    background-color: #fff;
+    padding: 0.74em;
+    border: thin solid #b2b5a2;
+    border-top-width: medium;
+    border-bottom: none;
+    font-weight: bold;
+}
+.tabarea > .tabs {
+    border-top: none;
+}
+.tabarea > .tabs > div {
+    display: none;
+    padding: 1em;
+}
+.tabarea > .tabs > div.selected {
+    display: block;
+}
+
+#myQuestions a:link, #myQuestions a:visited, #myAnswers a:link, #myAnswers a:visited {
+	text-decoration: none;
+	color: #800000;
+	font-size: 1.1em;
+}
+#myQuestions a:hover, #myAnswers a:hover {
+	color: #000000;
+}
+#myAnswers div {
+	margin-bottom: 10px;
+}
+#myAnswers div p span {
+	color: #1d9f75;
+}
+
+
+/* Generic Styles */
+.confirmation {
+    background: #e6e8dc url(../images/confirm.png) no-repeat 1% center;
+    padding: 10px 30px;
+    border: 1px solid #cdcec4;
+    font-size: 0.8em;
+    margin: 10px 0;
+    position: relative;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+}
+.confirmclose { color: #868783; cursor: pointer; }
+.special { color: #589bbb; }
+.specialtoo { color: #3b6f87; }
+.top20 { margin-top: 20px; }
+.bigparagap { margin-top: 20px; }
+.shadow { text-shadow: 1px 1px #bfbfbf; }
+.boldtext { font-weight: bold; color: #a4a593; }
+.splabel { font-weight: normal; font-style: italic; color: #800000 }
+.imp { color: #ff0000; }
+.smallfont {font-size: 0.7em !important;}
+.hide { display: none; }

@@ -1,0 +1,27 @@
+    <div class="header">
+        <div class="header__container">
+            <h1 class="header__sitename" onclick="location.href='#/questions';"
+                onmouseover="document.body.style.cursor='pointer';"
+                onmouseout="document.body.style.cursor='default';">CMAD</h1>
+            <div class="header__ciscologo">
+            	<form id="searchDB" ng-submit="searchTerms()">
+            		<input type="text" placeholder="Search database" ng-model="searchfield.query">
+            	</form>
+            </div>
+        </div>
+    </div>
+    <div class="topnavigation">
+        <div class="navholder">
+            <p class="navholder__welcome">
+                Welcome <span class="navholder__welcome--specialtoo">{{usersName}}</span>
+            </p>
+            <ul>
+                <li ng-hide="nologin"><a href="#/dashboard" title="Dashboard">Dashboard</a></li>
+                <li ng-hide="nologin"><a href="#/askaquestion" title="View Questions">Ask a Question</a></li>
+                <li><a href="#/questions" title="View Questions">View Questions</a></li>
+                <li ng-show="nologin"><a href="#/user/login" title="Login">Login</a></li>
+                <li ng-hide="nologin"><a href="#/user/logout" title="Logout">Logout</a></li>
+                <li ng-show="nologin"><a href="#/user/register" title="Register">Register</a></li>
+            </ul>
+        </div>
+    </div>

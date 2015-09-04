@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.kartshub.app.UserSession" table="sessions" schema="kartshubcmad" batch-size="3">
+		<id name="sessId" type="int">
+			<column name="session_id" />
+			<generator class="native" />
+		</id>
+		<property name="userId" type="int">
+			<column name="user_id" />
+		</property>
+		<property name="sessToken" type="string">
+			<column name="sessiontoken" length="150" />
+		</property>
+	</class>
+</hibernate-mapping>

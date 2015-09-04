@@ -1,0 +1,63 @@
+<header ng-controller="HeaderController">
+    <cmadheader></cmadheader>
+</header>
+
+<div class="container">
+    <div ng-controller="IndividualQuestionsController">
+        <h2 class="pagetitle">{{question.quesTitle}}</h2>
+        <div>
+            <ul class="qlistholder">
+                <li class="qlistholder__item quesId{{question.quesIdString}}">
+                	<div class="votecountholder">
+                        <a class="votecountholder__pos" ng-click="updateVotes('questions', 'add', question.quesIdString)"><span class="fa fa-thumbs-up fa-lg"></span></a>
+                        <span class="votecountholder__count">{{question.votes}}</span>
+                        <a class="votecountholder__pos votecountholder__pos--neg" ng-click="updateVotes('questions', 'minus', question.quesIdString)"><span class="fa fa-thumbs-down fa-lg"></span></a>
+                    </div>
+                    <div class="article">
+                        <p ng-bind-html="question.quesDesc"></p>
+                    </div></li>
+            </ul>
+        </div>
+        <div class="tabarea">
+            <nav class="tabarea__nav">
+                <a ng-class="{'selected': tab==1}" ng-click="showQuestion(); tab = 1">Answers<span id="ansCount"> ({{question.answers}})</span></a>
+                <a ng-class="{'selected': tab==2}" ng-click="tab = 2">Provide an Answer</a>
+            </nav>
+            <div class="tabarea__contents">
+                <div ng-class="{'selected': tab==1}">
+                    <div class="answers">
+                        <ul class="qlistholder">
+                            <li ng-repeat="ans in answers" class="qlistholder__item ansId{{ans.ansIdString}}">
+                                <div class="votecountholder">
+                                    <a class="votecountholder__pos" ng-click="updateVotes('answers', 'add', ans.ansIdString)"><span class="fa fa-thumbs-up"></span></a>
+                                    <span class="votecountholder__count">{{ans.votes}}</span>
+                                    <a class="votecountholder__pos votecountholder__pos--neg" ng-click="updateVotes('answers', 'minus', ans.ansIdString)"><span class="fa fa-thumbs-down"></span></a>
+                                </div>
+                                <div class="article">
+                                    <p>{{ans.ansDesc}}</p>
+                                    <p class="smallfont">Answered by {{ans.usersName}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tabarea__contents" ng-class="{'selected': tab==2}">
+                    <div class="confirmation" ng-show="submittedAnswer">
+                        Your answer was submitted to our database.<span
+                            class="close confirmclose fa fa-times-circle-o fa-lg"></span>
+                    </div>
+                    <form id="ansQuestion">
+                        <textarea rows="10" cols="30" ng-model="answ.ansDesc" ng-trim="false" ng-maxlength="500"></textarea>
+                        <p class="smallfont splabel">{{500-answ.ansDesc.length}} more characters allowed</p>
+                        <div class="notifylist"><input type="checkbox" ng-model="answ1.notifyme" ng-true-value="'YES'" ng-false-value="'NO'" id="notifyme"><label for="notifyme">Notify me by email when new follow up answers are posted</label></div>
+                        <input type="button" value="Submit" ng-click="submitAnswer()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <p>Project created as part of the CMAD Cohort #1 by Shubhojyoti Bhattacharya and Kartikey Shetty</p>
+</div>

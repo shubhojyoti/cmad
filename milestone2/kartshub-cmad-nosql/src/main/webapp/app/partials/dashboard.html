@@ -1,0 +1,43 @@
+<header ng-controller="HeaderController">
+    <cmadheader></cmadheader>
+</header>
+
+<div class="container" ng-controller="DashboardController">
+
+    <div class="tabarea">
+        <nav class="tabarea__nav">
+            <a ng-class="{'selected': tab==1}" ng-click="tab = 1">Update Profile</a>
+            <a ng-class="{'selected': tab==2}" ng-click="getUserQuestions(); tab = 2">My Questions</a>
+            <a ng-class="{'selected': tab==3}" ng-click="getUserAnswers(); tab = 3">My Answers</a>
+        </nav>
+        <div class="tabarea__contents">
+            <div ng-class="{'selected': tab==1}">
+                <div class="confirmation" ng-show="submittedProfile">Your user profile was updated.<span class="close confirmclose fa fa-times-circle-o fa-lg"></span></div>
+                <form id="profileUpdate">
+                    <p><label for="firstname">First Name</label><br><input type="text" id="firstname" ng-model="user.firstname"></p>
+                    <p><label for="lastname">Last Name</label><br><input type="text" id="lastname" ng-model="user.lastname"></p>
+                    <p><label for="username">Username/Email</label><br><input type="text" id="username" disabled="" ng-model="user.username"></p>
+                    <p><label for="password">Password</label><br><input type="password" id="password" ng-model="user.password"></p>
+                    <p><input type="button" value="Update Profile" ng-click="updateProfile()"></p>
+                </form>
+            </div>
+            <div ng-class="{'selected': tab==2}">
+                <div class="myquestions">
+                	<p ng-repeat="que in usrquestions"><a href="#/ques/{{que.quesIdString}}">{{que.quesTitle}}</a> - Answers ({{que.answers}})</p>
+                </div>
+            </div>
+            <div ng-class="{'selected': tab==3}">
+                <div class="myanswers">
+                	<div ng-repeat="ans in usranswers">
+                		<h3><a href="#/ques/{{ans.quesIdString}}">{{ans.quesTitle}}</a></h3>
+                		<p><span>Your Answer</span> : {{ans.ansDesc}}</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Project created as part of the CMAD Cohort #1 by Shubhojyoti Bhattacharya and Kartikey Shetty</p>
+</div>

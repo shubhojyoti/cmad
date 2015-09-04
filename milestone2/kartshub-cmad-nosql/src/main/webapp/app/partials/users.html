@@ -1,0 +1,45 @@
+    <div class="wrapper" ng-controller="LoginController">
+        <div class='login-wrapper'>
+
+            <div class="logincontainer">
+                <div class="loginbox-top">
+                    <h2>
+                        CMAD<span class="special login" ng-hide="doRegister">&nbsp;Login</span><span class="special register" ng-show="doRegister">&nbsp;Register</span>
+                    </h2>
+                </div>
+                <form class="login" name="login" novalidate>
+                    <div class="loginbox-body">
+                        <div class="errorlogin" ng-if="showError" class="zipper">
+                            <span ng-show="loginError">Either username or password was wrong</span>
+                            <span ng-show="registerError">The email address is already in the database</span>
+                        </div>
+                        <div class="register" ng-show="doRegister">
+                            <label for="firstname">First Name</label><br />
+                            <input type="text" name="firstname" id="firstname" ng-model="user.firstname" size="25" />
+                        </div>
+                        <div class="register" ng-show="doRegister">
+                            <label for="lastname">Last Name</label><br />
+                            <input type="text" name="lastname" id="lastname" ng-model="user.lastname" size="25" />
+                        </div>
+                        <div>
+                            <label for="username">Email</label><br />
+                            <input type="email" name="username" id="emailaddress" ng-model="user.username" size="25" />
+                            <span class="fa fa-exclamation-circle errorspan" ng-show="login.username.$error.email"></span>
+                        </div>
+                        <div>
+                            <label for="password">Password</label><br />
+                            <input type="password" name="password" id="password" ng-model="user.password" size="25" />
+                        </div>
+                    </div>
+                    <div class="loginbox-bottom">
+                        <div class="loginbuttons">
+                            <input type="button" class="loginbutton login" name="submit" value="Login" ng-click="loginUser()" ng-hide="doRegister">
+                            <input type="button" class="loginbutton register" name="submit" value="Register" ng-click="registerUser()" ng-show="doRegister">
+                            <div class="login" ng-hide="doRegister"><a href="#/user/register">New User? Register Here</a></div>
+                            <div class="register" ng-show="doRegister"><a href="#/user/login">Already have an account? Login Here</a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
